@@ -1,0 +1,12 @@
+.venues__headline {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 2rem;
+  text-align: center;
+}
+
+.venues {
+  width: clamp(10rem, 85%, 65ch);
+  margin: 0 auto;
+}

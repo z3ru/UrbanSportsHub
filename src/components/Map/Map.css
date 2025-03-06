@@ -1,0 +1,7 @@
+#map {
+  background: transparent url(/images/app-background.png) center no-repeat;
+  background-size: clamp(5rem, 80vw, 25rem);
+  inset: 0;
+  position: absolute;
+  z-index: 0;
+}

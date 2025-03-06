@@ -1,0 +1,57 @@
+.button {
+  border-radius: 0.5rem;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+.button:hover {
+  background: light-dark(#edf4fc, #0f0f0f);
+  border-color: light-dark(#0056b3, #edf4fc);
+  color: light-dark(#0056b3, #edf4fc);
+}
+
+.button--primary {
+  background: var(--blue);
+  color: white;
+}
+
+.button--primary:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+  color: white;
+}
+
+.button--icon {
+  align-items: center;
+  background: var(--blue);
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  font-size: 2rem;
+  height: 3.75rem;
+  justify-content: center;
+  padding: 0;
+  width: 3.75rem;
+}
+
+.button--icon:hover {
+  background: #0056b3;
+  color: white;
+}
+
+.button--disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.button--disabled:hover {
+  background: none;
+  border-color: var(--blue);
+  color: var(--blue);
+  cursor: default;
+}

@@ -1,0 +1,57 @@
+.class__card {
+  align-items: center;
+  background-color: var(--element-background);
+  border-radius: 0.5rem;
+  border: 3px solid var(--element-background);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  max-width: 600px;
+  padding: calc(1rem - 3px);
+}
+
+.class__card.selected {
+  border: 3px solid var(--green);
+}
+
+.class__time {
+  align-self: flex-start;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.class__details {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.class__course {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.class__location {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 0.25rem;
+}
+
+.class__status {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.class__status--checked-in {
+  color: var(--green);
+}
+
+.class__action {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+}

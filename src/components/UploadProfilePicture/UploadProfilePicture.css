@@ -1,0 +1,46 @@
+.uploader__wrapper {
+  align-self: center;
+  justify-self: center;
+  margin-bottom: -30cqi;
+  position: relative;
+  transform: translate(0, -60%);
+  width: max-content;
+}
+
+.uploader__picture {
+  container-type: inline-size;
+  height: clamp(6rem, 40vw, 15rem);
+  object-fit: cover;
+  width: clamp(6rem, 40vw, 15rem);
+}
+
+.uploader__picture .profile-picture__image {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.uploader__button {
+  align-items: center;
+  background-color: var(--bluish-grey);
+  border-radius: 50%;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-size: 15cqi;
+  height: 30cqi;
+  justify-content: center;
+  position: absolute;
+  right: 0.75rem;
+  width: 30cqi;
+  z-index: 1;
+}
+
+.uploader__button:hover {
+  background: #5a6268;
+}
+
+.uploader__error-message {
+  color: var(--red);
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
