@@ -5,7 +5,7 @@
   height: 100dvh;
   overflow-y: auto;
   padding-top: 2rem;
-  padding-bottom: 6rem;
+  padding-bottom: 6.5rem;
 }
 
 @media (min-height: 42.5rem) {
