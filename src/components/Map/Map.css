@@ -3,6 +3,8 @@
     no-repeat;
   background-size: clamp(5rem, 80vw, 25rem);
   inset: 0;
+  height: 100dvh;
   position: absolute;
+  width: 100%;
   z-index: 0;
 }

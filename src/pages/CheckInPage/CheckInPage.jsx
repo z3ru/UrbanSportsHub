@@ -10,6 +10,7 @@ import './CheckInPage.css';
 
 const CheckInPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { checkInObject, checkInTime } = useContext(CheckInContext);
 
   const handleOpenModal = () => {
     enterFullscreen();
@@ -20,8 +21,6 @@ const CheckInPage = () => {
     exitFullscreen();
     setIsModalOpen(false);
   };
-
-  const { checkInObject, checkInTime } = useContext(CheckInContext);
 
   return (
     <>
