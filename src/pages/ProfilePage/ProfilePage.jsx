@@ -52,7 +52,7 @@ const ProfilePage = () => {
   // Handle reset check-in time and show flash message
   const handleResetCheckIn = () => {
     resetCheckIn();
-    setFlashMessage('Check-in time successfully reset.');
+    setFlashMessage('Check-in data successfully reset.');
   };
 
   return (
