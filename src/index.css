@@ -7,7 +7,8 @@
   --bluish-grey: light-dark(#8c9bb0, #8c9bb0);
   --grey: light-dark(#ddd, #363636);
   --text: light-dark(#000, #fff);
-  --app-background: light-dark(#deeaf9, #3a629b);
+  --app-background: light-dark(#deeaf9, #222e40);
+  --map-background: light-dark(#deeaf9, #3a629b);
   --element-background: light-dark(#fff, #191e24);
 }
 
