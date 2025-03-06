@@ -1,11 +1,13 @@
 
 <div align="center" dir="auto">
-   <a href="#" rel="nofollow"><img width="350" alt="logo" src="https://github.com/user-attachments/assets/d1ee1936-0d66-4cbc-a079-73dd187745d1"></a><br>
+   <a href="https://urban-sports-hub.vercel.app/" rel="nofollow"><img width="350" alt="logo" src="https://github.com/user-attachments/assets/d1ee1936-0d66-4cbc-a079-73dd187745d1"></a><br>
 </div>
 
 ---
 
 Urban Sports Hub is a partial clone of the Urban Sports Club app, built to demonstrate its functionality and highlight a critical security flaw in the check-in process.
+
+🚀 **Live Demo**: [Urban Sports Hub on Vercel](https://urban-sports-hub.vercel.app/)
 
 ## Disclaimer
 
@@ -54,24 +56,38 @@ Coming soon!
 
 ## Usage
 
-- Select a venue and check in to a class.
-- View and manage your profile information.
+1. **Set Up Your Profile**  
+   - Navigate to the **Profile Page**.  
+   - Upload a **profile picture**, enter your **name**, and generate a **member ID**.  
+
+2. **Select a Class**  
+   - Go to the **Classes Page**.  
+   - Browse available classes and **select the one** you want to check in for.  
+
+3. **Check In**  
+   - Visit the **Check-in Page**.  
+   - Confirm your **check-in** to finalize the process.  
+
+4. **Reset Check-in Data**  
+   - If you want to start fresh, go back to the **Profile Page**.  
+   - Reset your **check-in data** to clear the previous selection.  
+
 
 ---
 
-# Security Flaw in the Urban Sports Club Check-In Process
+# Security Flaw in the Urban Sports Club Check-in Process
 
 ## Introduction
 
 Urban Sports Club offers a flexible membership that allows users to access a wide range of sports venues across multiple cities. To enter a venue, users must complete a check-in process via the official app. However, the current method of validating check-ins presents a critical security flaw that could be exploited by fraudulent users.
 
-## How the Current Check-In Process Works
+## How the Current Check-in Process Works
 
 1. **User Scans a QR Code**: Upon arriving at a sports venue, the user scans a QR code provided by the venue.
 2. **App Validates Membership**: The Urban Sports Club app checks whether the user meets all necessary requirements, including:
    - An active and valid membership
    - Available check-ins for the day
-3. **Successful Check-In Confirmation**: If all conditions are met, the app displays a confirmation overlay that signals a successful check-in.
+3. **Successful Check-in Confirmation**: If all conditions are met, the app displays a confirmation overlay that signals a successful check-in.
 4. **Manual Verification by Staff**: The venue staff visually inspects the check-in confirmation on the user’s device. A valid check-in should include:
    - The member’s profile picture
    - A green confirmation dialog box
@@ -93,7 +109,7 @@ The primary issue with this check-in system is that it relies entirely on a **vi
 
 To highlight this security flaw, I developed a **clone of the Urban Sports Club app** called **Urban Sports Hub**. This app mimics the check-in process and generates an overlay that looks identical to a real check-in screen. While this project was created for educational purposes only, it demonstrates how easily the current system could be bypassed.
 
-## A More Secure Check-In Solution
+## A More Secure Check-in Solution
 
 A better approach to handling check-ins would involve **QR code-based verification by the venue** instead of relying on a visual check. Here’s how it should work:
 
