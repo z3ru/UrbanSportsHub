@@ -32,9 +32,14 @@ html {
 }
 
 body {
-  background-color: var(--app-background);
+  background-color: var(--element-background);
   display: flex;
   flex-direction: column;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   justify-content: space-between;
+}
+
+#root {
+  background-color: var(--app-background);
+  height: 100dvh;
 }
