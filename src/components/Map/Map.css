@@ -1,4 +1,4 @@
-#map {
+.map {
   background: var(--map-background) url(/images/app-background.png) 50% 40%
     no-repeat;
   background-size: clamp(5rem, 80vw, 25rem);
