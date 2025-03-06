@@ -1,6 +1,6 @@
 # Urban Sports Hub
 
-Urban Sports Hub is a partly clone of the Urban Sports Club app, built to demonstrate its functionality and highlight a critical security flaw in the check-in process.
+Urban Sports Hub is a partial clone of the Urban Sports Club app, built to demonstrate its functionality and highlight a critical security flaw in the check-in process.
 
 ## Disclaimer
 
@@ -31,8 +31,8 @@ Coming soon!
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/ericelric/urban-sports-hub.git
-   cd urban-sports-hub
+   git@github.com:ericelric/UrbanSportsHub.git
+   cd UrbanSportsHub
    ```
 
 2. Install dependencies:
