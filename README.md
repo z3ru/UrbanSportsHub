@@ -1,4 +1,9 @@
-# Urban Sports Hub
+
+<div align="center" dir="auto">
+   <a href="#" rel="nofollow"><img width="350" alt="logo" src="https://github.com/user-attachments/assets/d1ee1936-0d66-4cbc-a079-73dd187745d1"></a><br>
+</div>
+
+---
 
 Urban Sports Hub is a partial clone of the Urban Sports Club app, built to demonstrate its functionality and highlight a critical security flaw in the check-in process.
 
@@ -54,7 +59,7 @@ Coming soon!
 
 ---
 
-## Security Flaw in the Urban Sports Club Check-In Process
+# Security Flaw in the Urban Sports Club Check-In Process
 
 ## Introduction
 
