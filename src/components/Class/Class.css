@@ -6,9 +6,9 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   color: var(--text);
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   justify-content: space-between;
-  max-width: 600px;
+  max-width: 30rem;
   padding: calc(1rem - 3px);
 }
 
@@ -19,31 +19,31 @@
 .class__time {
   align-self: flex-start;
   color: var(--text);
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .class__details {
   flex-grow: 1;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .class__course {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
 .class__location {
-  color: #666;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 0.25rem;
+  font-weight: 200;
 }
 
 .class__status {
   color: var(--blue);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .class__status--checked-in {
