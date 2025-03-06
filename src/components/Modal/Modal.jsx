@@ -3,8 +3,9 @@ import ProfileContext from '../../context/ProfileContext';
 import CheckInContext from '../../context/CheckInContext';
 import ModalProfilePicture from '../ModalProfilePicture/ModalProfilePicture';
 import { formatDateAndTime, formatTimer } from '../../utils/timeUtils';
-import { IoClose, IoShareSocialOutline } from 'react-icons/io5';
-import { FaRegClock } from 'react-icons/fa';
+import { IoShareSocialOutline } from 'react-icons/io5';
+import { RiTimeLine, RiCloseFill } from 'react-icons/ri';
+
 import './Modal.css';
 
 const Modal = ({ onClose }) => {
@@ -39,7 +40,7 @@ const Modal = ({ onClose }) => {
           aria-label="Close check-in"
           onClick={onClose}
         >
-          <IoClose />
+          <RiCloseFill />
         </button>
         <div
           className="modal__icon modal__icon--share"
@@ -63,7 +64,7 @@ const Modal = ({ onClose }) => {
             <time>{checkInTime && formatDateAndTime(checkInTime)}</time>
           </div>
           <div className="modal__timer">
-            <FaRegClock size={20} />
+            <RiTimeLine size={20} />
             <span>{formatTimer(timeElapsed)}</span>
           </div>
         </div>
