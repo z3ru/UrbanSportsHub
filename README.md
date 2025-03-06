@@ -114,15 +114,13 @@ To highlight this security flaw, I developed a **clone of the Urban Sports Club 
 A better approach to handling check-ins would involve **QR code-based verification by the venue** instead of relying on a visual check. Here’s how it should work:
 
 1. **User Receives a Unique QR Code**: Instead of displaying a confirmation screen, the app should generate a unique QR code representing the user’s valid membership.
-2. **Venue Scans the QR Code**: The venue staff should use a scanner or a dedicated Urban Sports Club terminal to verify the user’s membership in real-time.
+2. **Venue Scans the QR Code**: The venue staff should use a dedicated scanning app or an Urban Sports Club terminal to verify the user’s membership in real-time.
 3. **Backend Authentication**: The system should check the user’s membership status, remaining check-ins, and validity directly with Urban Sports Club’s backend.
 4. **Entry Decision**: If the check-in is valid, the system grants access and logs the event securely.
 
 ## Conclusion
 
 The current check-in system used by Urban Sports Club is highly vulnerable to fraud due to its reliance on manual visual verification. A more secure solution, where venues scan user-generated QR codes, would ensure that only legitimate check-ins are honored. This change would significantly improve security and prevent unauthorized access, benefiting both the company and its partner venues.
-
-By identifying this security gap, we can push for improvements that ensure a fair and trustworthy check-in process for all members.
 
 ---
 Urban Sports Hub<br>
