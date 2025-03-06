@@ -8,12 +8,6 @@
   padding-bottom: 6.5rem;
 }
 
-@media (min-height: 42.5rem) {
-  .profile-page {
-    justify-content: center;
-  }
-}
-
 .profile__container {
   align-items: center;
   display: flex;
