@@ -4,6 +4,7 @@ import Map from '../../components/Map/Map';
 import Button from '../../components/Button/Button';
 import Class from '../../components/Class/Class';
 import CheckInContext from '../../context/CheckInContext';
+import { enterFullscreen, exitFullscreen } from '../../utils/fullscreenUtils';
 import { BiQrScan } from 'react-icons/bi';
 import './CheckInPage.css';
 
@@ -11,32 +12,12 @@ const CheckInPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
-    const elem = document.documentElement;
-
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen(); // Standard fullscreen request
-    } else if (elem.mozRequestFullScreen) {
-      elem.mozRequestFullScreen(); // Firefox
-    } else if (elem.webkitRequestFullscreen) {
-      elem.webkitRequestFullscreen(); // Chrome, Safari, Opera
-    } else if (elem.msRequestFullscreen) {
-      elem.msRequestFullscreen(); // IE/Edge
-    }
-
+    enterFullscreen();
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    } else if (document.mozFullScreenElement) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitFullscreenElement) {
-      document.webkitExitFullscreen();
-    } else if (document.msFullscreenElement) {
-      document.msExitFullscreen();
-    }
-
+    exitFullscreen();
     setIsModalOpen(false);
   };
 
