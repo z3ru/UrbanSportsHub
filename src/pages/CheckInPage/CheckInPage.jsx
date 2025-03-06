@@ -9,8 +9,36 @@ import './CheckInPage.css';
 
 const CheckInPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+
+  const handleOpenModal = () => {
+    const elem = document.documentElement;
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen(); // Standard fullscreen request
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen(); // Firefox
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen(); // Chrome, Safari, Opera
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen(); // IE/Edge
+    }
+
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else if (document.mozFullScreenElement) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitFullscreenElement) {
+      document.webkitExitFullscreen();
+    } else if (document.msFullscreenElement) {
+      document.msExitFullscreen();
+    }
+
+    setIsModalOpen(false);
+  };
 
   const { checkInObject, checkInTime } = useContext(CheckInContext);
 
