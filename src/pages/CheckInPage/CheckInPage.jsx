@@ -3,14 +3,18 @@ import Modal from '../../components/Modal/Modal';
 import Map from '../../components/Map/Map';
 import Button from '../../components/Button/Button';
 import Class from '../../components/Class/Class';
+import Scanner from '../../components/Scanner/Scanner';
 import CheckInContext from '../../context/CheckInContext';
 import { enterFullscreen, exitFullscreen } from '../../utils/fullscreenUtils';
 import { BiQrScan } from 'react-icons/bi';
+import { useNavigate } from 'react-router-dom';
 import './CheckInPage.css';
 
 const CheckInPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isScannerActive, setIsScannerActive] = useState(false);
   const { checkInObject, checkInTime } = useContext(CheckInContext);
+  const navigate = useNavigate();
 
   const handleOpenModal = () => {
     enterFullscreen();
@@ -22,6 +26,16 @@ const CheckInPage = () => {
     setIsModalOpen(false);
   };
 
+  const toggleScanner = () => setIsScannerActive(!isScannerActive);
+
+  const handleScannerStop = (data) => {
+    setIsScannerActive(false);
+
+    if (!data) return;
+
+    checkInTime ? handleOpenModal() : navigate('/classes');
+  };
+
   return (
     <>
       <h1 className="check-in__headline">Check-in</h1>
@@ -29,7 +43,7 @@ const CheckInPage = () => {
       {isModalOpen && <Modal onClose={handleCloseModal} />}
 
       <div className="check-in__wrapper">
-        <Button buttonType="icon">
+        <Button onClick={toggleScanner} buttonType="icon">
           <BiQrScan />
         </Button>
 
@@ -49,6 +63,7 @@ const CheckInPage = () => {
         )}
       </div>
       <Map />
+      {isScannerActive && <Scanner onStop={handleScannerStop} />}
     </>
   );
 };
