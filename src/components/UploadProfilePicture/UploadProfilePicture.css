@@ -2,6 +2,8 @@
   align-self: center;
   justify-self: center;
   margin-bottom: -30cqi;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   transform: translate(0, -60%);
   width: max-content;
