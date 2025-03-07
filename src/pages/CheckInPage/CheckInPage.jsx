@@ -33,7 +33,7 @@ const CheckInPage = () => {
 
     if (!data) return;
 
-    checkInTime ? handleOpenModal() : navigate('/classes');
+    checkInObject ? handleOpenModal() : navigate('/classes');
   };
 
   return (
