@@ -10,3 +10,6 @@
   width: clamp(10rem, 85%, 65ch);
   margin: 0 auto;
 }
+.venues p {
+  margin-bottom: 2rem;
+}
