@@ -31,7 +31,12 @@ This project is for educational and demonstration purposes only. It is intended 
 
 ## Screenshots
 
-Coming soon!
+<img width="1898" alt="usc_1" src="https://github.com/user-attachments/assets/5c107e7b-0f96-490f-9bf7-f0e5e115b888" />
+
+<img width="1898" alt="ush_2" src="https://github.com/user-attachments/assets/b0d32e8d-d671-46ee-afe9-c9126c90074a" />
+
+<img width="1898" alt="ush_3" src="https://github.com/user-attachments/assets/308b6ae1-88e2-497a-a1eb-634ad5ddae42" />
+
 
 ## Installation & Setup
 
