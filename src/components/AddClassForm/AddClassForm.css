@@ -1,0 +1,28 @@
+.add-class-form {
+  background: var(--element-background);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.add-class__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+.add-class__group label {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.add-class__group input {
+  background: var(--element-background);
+  border: 1px solid var(--bluish-grey);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
