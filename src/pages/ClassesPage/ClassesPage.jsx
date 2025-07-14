@@ -1,6 +1,7 @@
 import './ClassesPage.css';
 import { useState, useEffect, useContext } from 'react';
 import Class from '../../components/Class/Class';
+import AddClassForm from '../../components/AddClassForm/AddClassForm';
 import CheckInContext from '../../context/CheckInContext';
 
 const ClassesPage = () => {
@@ -8,13 +9,35 @@ const ClassesPage = () => {
   const { checkInObject, checkInTime, handleCheckInObject } =
     useContext(CheckInContext);
 
-  // Todo: Move this code to a custom hook
+  // Load classes from localStorage or fallback to static json
   useEffect(() => {
-    fetch('/data/classes.json')
-      .then((response) => response.json())
-      .then((data) => setClasses(data))
-      .catch((error) => console.error('Error loading classes:', error));
+    const stored = localStorage.getItem('classes');
+    if (stored) {
+      setClasses(JSON.parse(stored));
+    } else {
+      fetch('/data/classes.json')
+        .then((response) => response.json())
+        .then((data) => {
+          setClasses(data);
+          localStorage.setItem('classes', JSON.stringify(data));
+        })
+        .catch((error) => console.error('Error loading classes:', error));
+    }
   }, []);
+
+  // Persist classes to localStorage
+  useEffect(() => {
+    if (classes.length) {
+      localStorage.setItem('classes', JSON.stringify(classes));
+    }
+  }, [classes]);
+
+  const handleAddClass = (newClass) => {
+    const newId = classes.length
+      ? Math.max(...classes.map((c) => c.id)) + 1
+      : 1;
+    setClasses([...classes, { id: newId, ...newClass }]);
+  };
 
   const handleSelectClass = (selectedClass) => {
     handleCheckInObject(selectedClass);
@@ -22,6 +45,8 @@ const ClassesPage = () => {
 
   return (
     <div className="classes__page">
+      <h1 className="classes-headline">Classes</h1>
+      <AddClassForm onAddClass={handleAddClass} />
       <div className="classes__list">
         {classes.map((cls) => (
           <Class
